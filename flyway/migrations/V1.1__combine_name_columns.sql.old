@@ -1,0 +1,5 @@
+ALTER TABLE user ADD COLUMN name VARCHAR(200);
+UPDATE user SET name = CONCAT(first_name, ' ', last_name);
+
+ALTER TABLE user DROP COLUMN first_name;
+ALTER TABLE user DROP COLUMN last_name;
